@@ -32,8 +32,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('hello','Home::hello');
-
-/**
+$routes->get('invalid','Home::invalid');
+$routes->get('table','Home::table');
+$routes->get('base','Home::base');
+$routes->get('news','News::news');
+$routes->get('news/create','News::create');
+$routes->add('news/sum/(:num)/(:num)','News::sum/$1/$2');
+    /**
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
