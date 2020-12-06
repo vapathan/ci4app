@@ -4,12 +4,13 @@
 namespace App\Controllers;
 use CodeIgniter\Config\Config;
 use CodeIgniter\HTTP\Files;
-
+use App\Models\UserModel;
 class News extends BaseController
 {
     public function index()
     {
-        echo "Welcome";
+        $m = new UserModel();
+        $m->getData();
     }
 
     public function about()

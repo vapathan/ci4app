@@ -38,6 +38,8 @@ $routes->get('base','Home::base');
 $routes->get('news','News::news');
 $routes->get('news/create','News::create');
 $routes->add('news/sum/(:num)/(:num)','News::sum/$1/$2');
+
+$routes->match(['get','post'],'contact','Page::contact');
     /**
  * --------------------------------------------------------------------
  * Additional Routing
