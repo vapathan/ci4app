@@ -32,6 +32,7 @@ chdir(__DIR__);
 require $pathsPath;
 $paths = new Config\Paths();
 
+
 // Location of the framework bootstrap file.
 $app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
 

@@ -9,7 +9,7 @@ class UserModel extends Model
     protected $table = "user";
     protected $DBGroup = "default";
 
-    protected $allowedFields = ['name'];
+    protected $allowedFields = ['name','email'];
     protected $primaryKey='id';
     protected $useTimestamps = false;
     protected $validationRules = [];
@@ -31,6 +31,11 @@ class UserModel extends Model
             echo "Eroor";
 
         }
+    }
+
+    public function getUserTable(){
+        $builder = $this->db->table('user');
+        return $builder;
     }
 
 

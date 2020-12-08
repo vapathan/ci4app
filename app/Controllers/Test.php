@@ -35,7 +35,7 @@ class Test extends BaseController
             if($this->testModel->save($this->request->getPost())){
                 echo 'success';
             }else{
-                print_r($this->testModel->errors());
+                print_r($this->testModel->errors()); 
             }
 
         }
