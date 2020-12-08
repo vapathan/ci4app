@@ -35,6 +35,7 @@ class UserModel extends Model
 
     public function getUserTable(){
         $builder = $this->db->table('user');
+        $builder = $builder->where('id>5');
         return $builder;
     }
 
