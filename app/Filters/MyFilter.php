@@ -13,7 +13,7 @@ class MyFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Do something here
-        echo "Before";
+        echo "Before " . date('Y');
     }
 
     //--------------------------------------------------------------------

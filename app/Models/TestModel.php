@@ -16,4 +16,25 @@ class TestModel extends Model
     ];
     protected $allowedFields = ['name', 'mobile'];
 
+    public static $students = [
+        ['id' => 1, 'name' => 'Vasim'],
+        ['id' => 2, 'name' => 'Rehan'],
+        ['id' => 3, 'name' => 'Aru'],
+        ['id' => 4, 'name' => 'Noor'],
+    ];
+
+    public function modify($id)
+    {
+        for ($i=0; $i<count(self::$students); $i++ ) {
+            if (self::$students[$i]['id'] == $id) {
+                self::$students[$i]['name'] = 'Vasim Pathan';
+            }
+        }
+
+    }
+
+    public function getData(){
+        return self::$students;
+    }
+
 }
